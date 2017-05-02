@@ -1,2 +1,2 @@
 # vcloud
-A cloud config for vCenter.
+A cloud-config for vCenter.
