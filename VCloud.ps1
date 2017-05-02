@@ -91,7 +91,7 @@ function New-VMFromTemplate
                -Datastore $templateObject.Datastore
         try
         {
-            $(Get-VM $name).PowerState -eq "PoweredOn") 
+            $(Get-VM $name).PowerState -eq "PoweredOn"
             Write-Host "The VM, $name is already powered on."
         }
         catch 
@@ -103,11 +103,12 @@ function New-VMFromTemplate
     else 
     {
         Write-Output "This VM has already been provisioned."
-        if($(Get-VM $name).PowerState -eq "PoweredOn") 
+        try
         {
+            $(Get-VM $name).PowerState -eq "PoweredOn"
             Write-Host "The VM, $name is already powered on."
         }
-        else 
+        catch
         {
             Write-Host "Powering on $name."
             Start-VM -VM $name
