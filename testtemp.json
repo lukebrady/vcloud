@@ -1,0 +1,17 @@
+{
+    "name" : "dev-ptest2",
+    "template" : "AutomatedDeploy_v1",
+    "args" : {
+        "ip_addr" : "168.30.194.14",
+        "netmask" : "255.255.255.0",
+        "gateway" : "168.30.194.1",
+        "dns_servers" : [
+            "168.30.194.10",
+            "168.30.194.11"
+        ],
+        "domain" : "ung.co"
+    },
+    "datastore" : "p2000_Lun5",
+    "resource_pool" : "Development Primary",
+    "purpose" : "Test deployment template."
+}
