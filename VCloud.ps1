@@ -89,11 +89,12 @@ function New-VMFromTemplate
                -Template $templateObject.Template `
                -ResourcePool $templateObject.Resource_Pool `
                -Datastore $templateObject.Datastore
-        if($(Get-VM $name).PowerState -eq "PoweredOn") 
+        try
         {
+            $(Get-VM $name).PowerState -eq "PoweredOn") 
             Write-Host "The VM, $name is already powered on."
         }
-        else 
+        catch 
         {
             Write-Host "Powering on $name."
             Start-VM -VM $name
