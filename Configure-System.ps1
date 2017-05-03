@@ -71,7 +71,7 @@ function Join-Domain
     
     try 
     {
-        Rename-Computer -NewName $ComputerName -DomainCredential $cred -ErrorAction Stop
+        Rename-Computer -NewName $ComputerName -DomainCredential $cred -ErrorAction Continue
         Add-Computer -DomainName $Domain -Credential $cred -ErrorAction Stop -Restart
     } 
     catch { $Error }
