@@ -76,5 +76,3 @@ function Join-Domain
     } 
     catch { $Error }
 }
-
-$data = Get-VMMetaData -URI "http://168.30.194.202:9200/vcloud/hosts/latest"

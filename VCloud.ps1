@@ -172,7 +172,3 @@ function Get-VMMetaData
     
     return $vmMetaData       
 }
-
-New-VMFromTemplate -Template C:\Users\ltbrady\Dropbox\Software\PowerShell\vCloud\testtemp.json -OutVariable temp
-Set-VMMetaData -VMTemplateObject $temp -URI "http://dev-elkstack.ung.co:9200/vcloud/hosts/latest"
-# $data = Get-VMMetaData -URI "http://dev-elkstack.ung.co:9200/vcloud/hosts/latest"
